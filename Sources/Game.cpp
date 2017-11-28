@@ -48,7 +48,7 @@ void Update()
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
         if (targetRect.Overlaps(bulletRect)) {
-            score += 1;         // スコアの加算
+            score += 100;         // スコアの加算   E:スコアを100点ずつ加算(HW16A113 多田 亮太)
             bulletPos.x = -999; // 弾を発射可能な状態に戻す
         }
     }
@@ -78,7 +78,13 @@ void Update()
     FillRect(targetRect, Color::red);
 
     // スコアの描画
+<<<<<<< HEAD
     SetFont("nicoca_v1.ttf", 100.0f);    //E:スコアを大きくする(HW16A113 多田 亮太)
     DrawText(FormatString("%02d", score), Vector2(-319, 159), Color::black);  //E:スコアを下に下げる(HW16A113 多田 亮太)
     DrawText(FormatString("%02d", score), Vector2(-320, 160), Color::white);  //E:スコアを下に下げる(HW16A113 多田 亮太)
+=======
+    SetFont("nicoca_v1.ttf", 20.0f);
+    DrawText(FormatString("%05d", score), Vector2(-319, 199), Color::black); //F:スコアを5桁の表示に変更(HW16A113 多田 亮太)
+    DrawText(FormatString("%05d", score), Vector2(-320, 200), Color::white); //F:スコアを5桁の表示に変更(HW16A113 多田 亮太)
+>>>>>>> feature/f_score_change
 }
