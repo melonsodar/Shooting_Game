@@ -16,6 +16,7 @@ Vector2 cannonPos;      //!< 砲台の位置
 Vector2 bulletPos;      //!< 弾の位置
 Rect    targetRect;     //!< ターゲットの矩形
 int     score;          //!< スコア
+bool    cannonflag = true; //!< 砲台の上下判定 (C HW16A108 相馬)
 
 
 // ゲーム開始時に呼ばれる関数です。
@@ -63,6 +64,11 @@ void Update()
     // 砲台の描画
     FillRect(Rect(cannonPos.x-10, -140, 20, 100), Color::blue);
     DrawImage("cannon.png", cannonPos);
+    
+    if (cannonPos.y <= -140) cannonflag = true;  //(C HW16A108 相馬)
+    if (cannonPos.y > -70) cannonflag = false;   //(C HW16A108 相馬)
+    if (cannonflag == true) cannonPos.y+=1;      //(C HW16A108 相馬)
+    else cannonPos.y-=1;                         //(C HW16A108 相馬)
 
     // ターゲットの描画
     FillRect(targetRect, Color::red);
@@ -72,4 +78,3 @@ void Update()
     DrawText(FormatString("%02d", score), Vector2(-319, 199), Color::black);
     DrawText(FormatString("%02d", score), Vector2(-320, 200), Color::white);
 }
-
