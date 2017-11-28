@@ -54,6 +54,12 @@ void Update()
 
     // 雲の描画
     DrawImage("cloud1.png", cloudPos);
+    
+    cloudPos[0]+= 10.0f * Time::deltaTime*15;//(B HW16A108 相馬)
+    //雲の移動(B HW16A108 相馬)
+    if (cloudPos[0] > 300) {//(B HW16A108 相馬)
+        cloudPos[0] = -558;                //(B HW16A108 相馬)
+    }
 
     // 弾の描画
     if (bulletPos.x > -999) {
