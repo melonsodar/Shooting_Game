@@ -37,6 +37,11 @@ void Update()
         bulletPos = cannonPos + Vector2(50, 10);
     }
 
+    void PlaySE();  //(H)hw15a139 中西
+    
+    if(Input::GetKeyDown(KeyMask::Space)) {
+        PlayBGM("se_maoudamashii_explosion03.mp3");
+    }
     // 弾の移動
     if (bulletPos.x > -999) {
         bulletPos.x += 10 * Time::deltaTime;
