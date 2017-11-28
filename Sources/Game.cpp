@@ -78,7 +78,7 @@ void Update()
     FillRect(targetRect, Color::red);
 
     // スコアの描画
-    SetFont("nicoca_v1.ttf", 20.0f);
-    DrawText(FormatString("%02d", score), Vector2(-319, 199), Color::black);
-    DrawText(FormatString("%02d", score), Vector2(-320, 200), Color::white);
+    SetFont("nicoca_v1.ttf", 100.0f);    //E:スコアを大きくする(HW16A113 多田 亮太)
+    DrawText(FormatString("%02d", score), Vector2(-319, 159), Color::black);  //E:スコアを下に下げる(HW16A113 多田 亮太)
+    DrawText(FormatString("%02d", score), Vector2(-320, 160), Color::white);  //E:スコアを下に下げる(HW16A113 多田 亮太)
 }
