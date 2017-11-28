@@ -22,8 +22,8 @@ int     score;          //!< スコア
 void Start()
 {
     cloudPos = Vector2(-320, 100);
-    cannonPos = Vector2(-310, -150);//(C HW16A108 相馬　砲台を左に)
-    targetRect = Rect(280, -140, 40, 40);//(C HW16A108 相馬　ターゲットを右に)
+    cannonPos = Vector2(-310, -150);//(A HW16A108 相馬　砲台を左に)
+    targetRect = Rect(280, -140, 40, 40);//(A HW16A108 相馬　ターゲットを右に)
     bulletPos.x = -999;
     score = 0;
 }
