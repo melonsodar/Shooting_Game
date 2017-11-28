@@ -38,7 +38,10 @@ void Update()
 
     // 弾の移動
     if (bulletPos.x > -999) {
-        bulletPos.x += 10 * Time::deltaTime;
+        bulletPos.x += 200 * Time::deltaTime;  //D:弾のスピードを上げる(HW16A113 多田 亮太)
+        if (bulletPos.x > 320) {               //D:弾が画面右端を通り越したら再度発射可能にする(HW16A113 多田 亮太)
+            bulletPos.x = -999;                //D:弾が画面右端を通り越したら再度発射可能にする(HW16A113 多田 亮太)
+        }
 
         // ターゲットと弾の当たり判定
         Rect bulletRect(bulletPos, Vector2(32, 20));
