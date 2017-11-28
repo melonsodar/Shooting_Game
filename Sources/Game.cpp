@@ -21,6 +21,7 @@ int     score;          //!< スコア
 // ゲーム開始時に呼ばれる関数です。
 void Start()
 {
+    PlayBGM("bgm_maoudamashii_8bit07.mp3");  //(G)hw15a139,中西
     cloudPos = Vector2(-320, 100);
     cannonPos = Vector2(-80, -150);
     targetRect = Rect(80, -140, 40, 40);
