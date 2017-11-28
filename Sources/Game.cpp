@@ -89,13 +89,7 @@ void Update()
     FillRect(targetRect, Color::red);
 
     // スコアの描画
-<<<<<<< HEAD
     SetFont("nicoca_v1.ttf", 100.0f);    //E:スコアを大きくする(HW16A113 多田 亮太)
-    DrawText(FormatString("%02d", score), Vector2(-319, 159), Color::black);  //E:スコアを下に下げる(HW16A113 多田 亮太)
-    DrawText(FormatString("%02d", score), Vector2(-320, 160), Color::white);  //E:スコアを下に下げる(HW16A113 多田 亮太)
-=======
-    SetFont("nicoca_v1.ttf", 20.0f);
-    DrawText(FormatString("%05d", score), Vector2(-319, 199), Color::black); //F:スコアを5桁の表示に変更(HW16A113 多田 亮太)
-    DrawText(FormatString("%05d", score), Vector2(-320, 200), Color::white); //F:スコアを5桁の表示に変更(HW16A113 多田 亮太)
->>>>>>> feature/f_score_change
+    DrawText(FormatString("%05d", score), Vector2(-319, 159), Color::black);  //E:スコアを下に下げる(HW16A113 多田 亮太) F:スコアを5桁の表示に変更(HW16A113 多田 亮太)
+    DrawText(FormatString("%05d", score), Vector2(-320, 160), Color::white);  //E:スコアを下に下げる(HW16A113 多田 亮太) F:スコアを5桁の表示に変更(HW16A113 多田 亮太)
 }
